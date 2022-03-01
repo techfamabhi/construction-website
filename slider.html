@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
+    <!-- <title>Responsive Owl-Carousel Slider | CodingNepal</title> -->
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.wrapper{
+  width: 100%;
+}
+.carousel{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px;
+}
+.carousel .newcard{
+  color: #fff;
+  text-align: center;
+     
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+.carousel .newcard-1{
+ background-color: #fff;
+ color: black;
+}
+.carousel .newcard-2{
+  background: #0072bc;
+}
+.carousel .newcard-3{
+  background: #39b54a;
+}
+.carousel .newcard-4{
+  background: #f26522;
+}
+.carousel .newcard-5{
+  background: #630460;
+}
+.owl-dots{
+  text-align: center;
+  margin-top: 40px;
+}
+.owl-dot{
+  height: 15px;
+  width: 45px;
+  margin: 0 5px;
+  outline: none;
+  border-radius: 14px;
+  border: 2px solid #0072bc!important;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: #0072bc!important;
+}
+#testimonial_section{
+  width: 100%;
+  height: 560px;
+  background-color: #0072bc;
+}
+.card{
+    color: black;
+    width: 300px;
+    height: 300px;
+}
+#img{
+  height:200px;
+  width:100%;
+}
+.icon i{
+  font-size:20px;
+  color:#ffa710;
+  cursor:pointer;
+  transition:all .4s ease-in;
+}
+.card{
+  cursor:pointer;
+  transition:all .4s ease-in-out;
+}
+.card:hover{
+  transform:scale(1.05);
+  box-shadow:10px 10px 10px #888888;
+}
+.icon i:hover{
+  transform:scale(1.25) rotate(100deg);
+  color:#18d4ca;
+}
+
+.close{
+  color:#ffa710;
+  opacity:1;
+}
+.modal-lg{
+  max-width:1200px;
+}
+.save{
+  background-color: #667df3;
+  font-size:14px;
+}
+.form-control::placeholder{
+/*   font-size:14px; */
+  opacity:.5;
+}
+.modal-logo img{
+  width:100%;
+  height:150px
+}
+.col-form-label{
+  font-weight:500;
+}
+.ovrly {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+     height:150px;
+    left: 1;
+    top: 0;
+    width: 85%;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+ .modal-logo:hover .ovrly {
+    opacity: 1;
+  }
+.img-buttons {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+   -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.img-buttons .material-icons{
+  opacity: 0;
+  color: rgba(50, 50, 50, 0.9);
+  background: rgb(256, 256, 256);
+  font-size: 30px;
+      text-align: center;
+      text-decoration: none;
+  border-radius: 50%;
+}
+.modal-logo:hover .img-buttons .material-icons{
+    opacity: 1;
+  }
+/* MODAL ANIMATION */
+
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.bounce {
+  animation-name: bounce;
+  transform-origin: center bottom;
+}
+@keyframes bounceInLeft {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(5px, 0, 0);    
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+.bounceInLeft {
+  animation-name: bounceInLeft;
+}
+
+/* animated text */
+.animated-text{
+  animation: changefontcolor 2s ease-in-out infinite;
+}
+@keyframes changefontcolor {
+  0%{
+    color:black;
+  }
+  50%{
+    color:red;
+  }
+  100%{
+    color:purple;
+  }
+}
+#card_text_new{
+    color: gray;
+    font-size: 14px;
+}
+#card_icon{
+    font-size: 24px;
+    color: #ffa710;
+}
+    </style>
+  </head>
+  <body>
+      <div id="testimonial_section" class="col-md-12">
+          <div class="row"> 
+            <div class="wrapper" style="margin-top: 80px;">
+      <div class="carousel owl-carousel col-md-12">
+        <div class="col-md-4"> 
+              <div class="card" style="width: 19rem;height: 25rem;">
+                <div class="card-body">
+                    <img src="./images/download.jpg" alt="" srcset="">
+                  <h5 class="card-title pt-3">Designer</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    <i class="fa fa-quote-left" id="card_icon"></i>
+                      Abhishek Gouda
+                      <i class="fa fa-quote-right"  id="card_icon"></i>
+                    </h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
+                </div>
+              </div>    
+        
+        </div>
+        <div class="col-md-4"> 
+            <div class="card" style="width: 19rem;height: 25rem;">
+                <div class="card-body">
+                    <img src="./images/download.jpg" alt="" srcset="">
+                  <h5 class="card-title pt-3">Designer</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    <i class="fa fa-quote-left" id="card_icon"></i>
+                      Abhishek Gouda
+                      <i class="fa fa-quote-right"  id="card_icon"></i>
+                    </h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
+                </div>
+              </div>    
+      
+      </div>
+<div class="col-md-4"> 
+   <div class="card" style="width: 19rem;height: 25rem;">
+                <div class="card-body">
+                    <img src="./images/download.jpg" alt="" srcset="">
+                  <h5 class="card-title pt-3">Designer</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    <i class="fa fa-quote-left" id="card_icon"></i>
+                      Abhishek Gouda
+                      <i class="fa fa-quote-right"  id="card_icon"></i>
+                    </h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
+                </div>
+              </div>    
+        </div>
+</div>
+</div>
+</div> 
+</div>
+
+<script>
+      $(".carousel").owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+          0:{
+            items:1,
+            nav: false
+          },
+          600:{
+            items:2,
+            nav: false
+          },
+          1000:{
+            items:3,
+            nav: false
+          }
+        }
+      });
+    </script>
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

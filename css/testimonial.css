@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+boy{
+    font-size: 16px;
+    font-family: tahoma;
+}
+h1,h2,h3{
+    font-family: tahoma;
+}
+.about-me{
+    padding: 0;
+}
+.card-img-overlay{
+    background-color: rgba(15, 115, 233, 0.9);
+}
+
+h2{
+    text-align: center;
+    color: white;
+    margin: 180px auto;
+}
+.card-img{
+    height: 100vh;
+}
+.carousel-indicators{
+    bottom: 100px;
+}
+
+.about-me .carousel-indicators li{
+    height: 89px;
+    width: 89px;
+    z-index: 55;
+    text-indent: 5px;
+    border: 2px solid #fafafa;
+    border-style: solid;
+    border-radius: 50%;
+    padding: 3px;
+    background: none;
+    margin: 0 20px;
+    position: relative;
+    top:43px;
+    opacity: 0.5;
+}
+.carousel-indicators li span{
+    font-family: tahoma;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+    color: white;
+}
+.carousel-indicators li img{
+   width: 100%;
+   position: relative;
+   left: -5px;
+   padding: 15px;
+}
+.carousel-indicators li.active{
+    height: 166px;
+    width: 166px;
+    opacity: 1;
+    top:0px;
+    padding: 7px;
+}
+.carousel-indicators li.active span{
+    display: block;
+}
+.carousel-caption{
+    bottom: 335px;
+}
+.carousel-caption p{
+    max-width: 540px;
+    margin: 0 auto;
+    margin-top: 50px;
+}

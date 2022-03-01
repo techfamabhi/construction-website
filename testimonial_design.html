@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css
+">
+<link rel="stylesheet" href="./css/testimonial.css">
+</head>
+<body>
+    <div class="container-fluid about-me" id="testimonial">
+   <div id="my-carousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="card">
+            <img src="./images/download.jpg" alt="" srcset="" class="card-img d-bloack w-100">
+            <div class="card-img-overlay">
+                <h2 style="padding: 20px;">PEOPLE SAY ABOUT ME</h2>
+            </div>
+        </div>
+
+
+        <div class="carousel-item gap">
+            <div class="carousel-caption d-md-block">
+                <img src="https://img.icons8.com/color/48/000000/quote-left.png"/>                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore fugit provident consequatur itaque odio. Aliquam facilis, minima libero non soluta laudantium cumque odit itaque maxime deleniti error animi explicabo dicta?</p>
+            </div>
+        </div>
+
+
+
+        <div class="carousel-item active">
+            <div class="carousel-caption d-md-block">
+                <img src="https://img.icons8.com/color/48/000000/quote-left.png"/>                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore fugit provident consequatur itaque odio. Aliquam facilis, minima libero non soluta laudantium cumque odit itaque maxime deleniti error animi explicabo dicta?</p>
+            </div>
+        </div>
+
+        
+        <div class="carousel-item">
+            <div class="carousel-caption d-md-block">
+                <img src="https://img.icons8.com/color/48/000000/quote-left.png"/>                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore fugit provident consequatur itaque odio. Aliquam facilis, minima libero non soluta laudantium cumque odit itaque maxime deleniti error animi explicabo dicta?</p>
+            </div>
+        </div>
+
+
+
+
+
+    </div>  
+    
+    
+
+
+    <ol class="carousel-indicators">
+        <li data-target="#my-carousel" data-slide-to="0">
+            <img src="./images/images (2).jpg" alt="" srcset="" style="border-radius: 50%;">
+            <span><b>Furkhan Shaikh</b></span>
+        </li>
+
+
+
+
+        <li class="active" data-target="#my-carousel" data-slide-to="0">
+            <img src="./images/images (1).jpg" alt="" srcset="" style="border-radius: 50%;">
+            <span><b>Abhishek Gouda</b></span>
+        </li>
+
+        
+
+        <li data-target="#my-carousel" data-slide-to="0">
+            <img src="./images/download (1).jpg" alt="" srcset="" style="border-radius: 50%;">
+            <span><b>Parveen Nadaf</b></span>
+        </li>
+
+        
+        <li data-target="#my-carousel" data-slide-to="0">
+            <img src="./images/download (2).jpg" alt="" srcset="" style="border-radius: 50%;">
+            <span><b>Soundary Gudpalli</b></span>
+        </li>
+
+
+
+
+    </ol>
+
+
+
+
+
+
+
+
+   </div> 
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+    
+
+    jquery(document).ready(function(){
+        jquery(".owl-carousel").OwlCarousel({
+            loop:true,
+            center:false,
+            margin:20,
+            responsiveClass:true,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:false,
+                },
+                600:{
+                    items:2,
+                    nav:false,
+                },
+                1000:{
+                    items:2,
+                   loop:true
+                }
+            }
+        };
+    })
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
